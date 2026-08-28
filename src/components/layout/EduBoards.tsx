@@ -1,6 +1,6 @@
 import Board from "../common/Board";
 
-import "../../styles/EduBoards.css";
+import "../../styles/Eduboards.css";
 
 import homeImage from "../../assets/images/img_mom_child.jpg";
 
