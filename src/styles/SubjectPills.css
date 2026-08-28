@@ -1,0 +1,27 @@
+.subject-pills {
+  margin-bottom: 16px;
+}
+
+.subject-pill {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 12px;
+
+  border-radius: 4px;
+
+  background-color: #008f20;
+  color: #ffffff;
+
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+@media (max-width: 575.98px) {
+  .subject-pill {
+    font-size: 0.65rem;
+    padding: 5px 9px;
+  }
+}

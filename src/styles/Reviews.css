@@ -1,0 +1,57 @@
+/* Title */
+
+h3 {
+  margin: 0 0 12px;
+
+  color: #222222;
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  text-align: left;
+  font-family: Roboto;
+font-weight: 500;
+font-style: Medium;
+font-size: 19px;
+line-height: 160%;
+letter-spacing: -2%;
+
+}
+
+.review-section-title {
+  font-family: Roboto;
+  font-style: Medium;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 160%;
+  letter-spacing: -2%;
+  color: #111111;
+}   
+
+/* Description */
+
+p {
+  color: #555555;
+
+  font-size: 0.9rem;
+
+  line-height: 1.4;
+  font-family: Roboto;
+  font-weight: 300;
+  font-style: light;
+    line-height: 164%;
+    letter-spacing: 0%;
+
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  h3 {
+    padding: 34px 18px 18px;
+  }
+  p {
+    font-size: 1rem;
+  }
+}

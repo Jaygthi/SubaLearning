@@ -1,0 +1,82 @@
+.education-board {
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+/* Black board heading */
+
+.education-board__title {
+  width: fit-content;
+  padding: 0.15rem 1.5rem;
+  margin-left: 0;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* White description */
+
+.education-board__description {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem 0.5rem;
+
+  background-color: #ffffff;
+  color: #111111;
+
+  border-radius: 0 1.25rem 1.25rem 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: bold;
+  line-height: 1.3;
+
+  text-align: center;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .education-board {
+    max-width: 340px;
+  }
+
+  .education-board__title {
+    font-size: 1.1rem;
+
+  }
+
+  .education-board__description {
+    font-size: 1.25rem;
+    min-height: 54px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .education-board {
+    max-width: 100%;
+  }
+
+  .education-board__title {
+    padding: 5px 14px;
+    font-size: 1rem;
+  }
+
+  .education-board__description {
+    min-height: 50px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}

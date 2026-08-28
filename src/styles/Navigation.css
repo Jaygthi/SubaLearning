@@ -1,0 +1,32 @@
+.nav-link {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar {
+  min-height: 0;
+}
+
+.logo-img {
+  height: 5rem;
+  width: auto;
+}
+
+@media (max-width: 767px) {
+  .logo-img {
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .logo-img {
+    height: 1.25rem;
+  }
+}

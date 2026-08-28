@@ -1,0 +1,59 @@
+.excellence-card {
+
+  border: 0;
+  border-radius: 7px 7px 0 0;
+
+  background-color: #e5ffe9;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.12);
+
+  text-align: center;
+}
+.green-white-gradient {
+  background: radial-gradient(circle, #ffffff 0%, #e5ffe9 50%);
+}
+
+.excellence-card__value {
+  min-height:5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  color: #008f20;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  background-color: #e5ffe9;
+}
+
+.excellence-card__label {
+  padding: 6px 10px;
+  border-radius: 0 0 7px 7px;
+  background-color: #222222;
+  color: #ffffff;
+
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 100%;
+    letter-spacing: 4%;
+
+}
+
+@media (max-width: 575.98px) {
+  .excellence-card__value {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,64 @@
+.tutor-card {
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 7px;
+
+  background-color: #dfffe4;
+
+  box-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tutor-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.16);
+}
+
+.tutor-card__image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+
+  object-fit: cover;
+}
+
+.tutor-card__body {
+  padding: 10px 12px 12px;
+}
+
+.tutor-card__description {
+  margin-bottom: 12px;
+
+  color: #333;
+
+  font-size: 0.75rem;
+
+  line-height: 1.35;
+}
+
+.tutor-card__achievement {
+  color: #222;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-align: right;
+}
+
+@media (max-width: 575.98px) {
+  .tutor-card__description {
+    font-size: 0.85rem;
+  }
+
+  .tutor-card__achievement {
+    font-size: 0.8rem;
+  }
+}

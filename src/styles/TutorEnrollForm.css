@@ -1,0 +1,47 @@
+.tutor-enroll-form {
+  width: 100%;
+}
+
+.tutor-enroll-form .form-label {
+  margin-bottom: 0.35rem;
+
+  color: #222;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tutor-enroll-form .form-control {
+  min-height: 42px;
+
+  border-color: #d6d6d6;
+  border-radius: 4px;
+
+  font-size: 0.85rem;
+}
+
+.tutor-enroll-form textarea.form-control {
+  resize: vertical;
+}
+
+.tutor-enroll-form .form-control:focus {
+  border-color: #008f20;
+
+  box-shadow:
+    0 0 0 0.2rem rgba(0, 143, 32, 0.15);
+}
+
+.tutor-enroll-form .btn-success {
+  background-color: #008f20;
+  border-color: #008f20;
+}
+
+.tutor-enroll-form .btn-success:hover {
+  background-color: #007619;
+  border-color: #007619;
+}
+
+.tutor-enroll-form .btn-success:focus-visible {
+  outline: 3px solid rgba(0, 143, 32, 0.3);
+  outline-offset: 2px;
+}

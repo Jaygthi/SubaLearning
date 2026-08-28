@@ -1,0 +1,67 @@
+/* Step Custom Styles */
+.step-card {
+  position: relative;
+}
+
+.step-number{
+font-weight: 600;
+font-style: SemiBold;
+font-size: 1.5rem;
+line-height: 100%;
+letter-spacing: 2%;
+color:#F4F4F4;
+
+}
+
+.card-title {
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 2%;
+  color:#242424;
+}
+
+li{
+ font-family: Roboto;
+font-weight: 400;
+font-style: Regular;
+font-size: 17px;
+line-height: 100%;
+letter-spacing: 2%;
+text-align: left;
+}
+
+/* Horizontal Arrow Pointer for Large Screens */
+@media (min-width: 992px) {
+  .step-card-arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 24px solid #ffffff;
+    z-index: 2;
+  }
+}
+
+/* Vertical Arrow Pointer for Mobile & Tablet Screens */
+@media (max-width: 991.98px) {
+  .step-card-arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #ffffff;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,29 @@
+.academic-excellence {
+  padding: 55px 0;
+  background-color: #ffffff;
+}
+
+.academic-excellence__title {
+  margin: 2rem 0;
+
+  color: #222222;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(
+    1.4rem,
+    3vw,
+    1.9rem
+  );
+
+  font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+  .academic-excellence {
+    padding: 40px 0;
+  }
+}

@@ -1,0 +1,81 @@
+.meetmentor_section {
+  font-family: Roboto Serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 1.5px;
+  line-height: 147%;
+  letter-spacing: 0%;
+
+  p {
+    margin: 0;
+    color: #222222;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.meet-mentor-title {
+  margin: 0;
+  color: #222222;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 500;
+}
+
+.meetmentorimage {
+  width: 2rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.meetmentorheader h1 {
+  width: fit-content;
+  padding: 0.15rem 1.5rem;
+  color: #000000;
+}
+
+.img_meetmentor {
+  width: 15rem;
+  height: auto;
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .meet-mentor {
+    max-width: 340px;
+  }
+
+  .meet-mentor__title {
+    font-size: 1.1rem;
+  }
+
+  .meet-mentor__description {
+    font-size: 1.25rem;
+    min-height: 54px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .meet-mentor {
+    max-width: 100%;
+  }
+
+  .meet-mentor__title {
+    padding: 5px 14px;
+    font-size: 1rem;
+  }
+
+  .meet-mentor__description {
+    min-height: 50px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}

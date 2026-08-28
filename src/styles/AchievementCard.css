@@ -1,0 +1,145 @@
+.student-achievement-card {
+  background: #ffffff;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+
+  padding: 14px;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.student-achievement-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+
+.student-achievement-header {
+  text-align: center;
+
+  padding: 2px 4px 12px;
+}
+
+.student-achievement-name {
+  margin: 0;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.student-achievement-subject {
+  margin-top: 5px;
+
+  color: #555555;
+
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Image */
+
+.student-achievement-image-wrapper {
+  width: 100%;
+
+  aspect-ratio: 1.45 / 1;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+}
+
+.student-achievement-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.student-achievement-card:hover
+.student-achievement-image {
+  transform: scale(1.02);
+}
+
+/* Divider */
+
+.student-achievement-divider {
+  width: 60%;
+
+  height: 2px;
+
+  margin: 20px auto 16px;
+
+  background-color: #dddddd;
+}
+
+/* Description */
+
+.student-achievement-description {
+  color: #171717;
+
+  font-size: 1rem;
+  line-height: 1.35;
+
+  text-align: left;
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .student-achievement-card {
+    padding: 12px;
+  }
+
+  .student-achievement-name {
+    font-size: 1.2rem;
+  }
+
+  .student-achievement-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .student-achievement-card {
+    max-width: 420px;
+
+    margin-inline: auto;
+  }
+
+  .student-achievement-name {
+    font-size: 1.15rem;
+  }
+
+  .student-achievement-subject {
+    font-size: 0.95rem;
+  }
+}

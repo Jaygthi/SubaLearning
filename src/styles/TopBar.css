@@ -1,0 +1,33 @@
+.top-bar {
+  width: 100%;
+  background-color: #008B13;
+  color: #ffffff;
+}
+
+.top-bar-text {
+  font-family: Roboto Serif;
+  font-style: normal;
+  letter-spacing: 4%;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.top-bar-head {
+  font-style: normal;
+  font-size: 1.15rem;
+}
+
+.top-bar-co {
+  font-size: 1.15rem;
+}
+
+/* Small mobile screens */
+@media (max-width: 575.98px) {
+  .top-bar-text {
+    font-size: 0.78rem;
+  }
+
+  .top-bar .bi-mortarboard-fill {
+    font-size: 1rem !important;
+  }
+}

@@ -1,0 +1,13 @@
+.steps-section{
+    background-color: #0b8d2d;
+    color: white;
+}
+
+#steps-section-heading {
+  font-family: Roboto Serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: 2%;
+}

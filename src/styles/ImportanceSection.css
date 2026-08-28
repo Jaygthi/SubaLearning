@@ -1,0 +1,32 @@
+.importance-section {
+  background-color: #ffffff;
+}
+
+.importance-item {
+  color: #333;
+
+  font-size: 0.9rem;
+
+  line-height: 1.55;
+}
+
+.importance-item strong {
+  color: #222;
+}
+
+.importance-section__image {
+  display: block;
+
+  width: 100%;
+  max-width: 330px;
+
+  margin-inline: auto;
+
+  border-radius: 4px;
+}
+
+@media (max-width: 575.98px) {
+  .importance-item {
+    font-size: 0.95rem;
+  }
+}

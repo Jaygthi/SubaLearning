@@ -1,0 +1,44 @@
+.subject-intro {
+  background-color: #ffffff;
+}
+
+.subject-intro__image {
+  width: 100%;
+  max-height: 310px;
+
+  object-fit: cover;
+
+  border-radius: 3px;
+}
+
+.subject-intro__title {
+  margin-bottom: 14px;
+
+  color: #222;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.subject-intro__description {
+  color: #444;
+
+  font-size: 0.9rem;
+
+  line-height: 1.65;
+}
+
+@media (max-width: 767.98px) {
+  .subject-intro__title {
+    font-size: 1.6rem;
+  }
+
+  .subject-intro__description {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,151 @@
+.tutor-enrollment-process {
+  height: 100%;
+
+  background-color: #008f18;
+
+  color: #ffffff;
+}
+
+.tutor-enrollment-process__content {
+  padding: 28px 28px 20px;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.tutor-enrollment-process__title {
+  margin: 0 0 24px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.5rem, 3vw, 2rem);
+
+  font-weight: 400;
+  letter-spacing: 4%;
+
+  text-align: center;
+}
+
+.tutor-enrollment-process__list {
+  margin: 0;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius:0 2rem 2rem 0;
+  text-align: left;
+  list-style: none;
+  background-color: white;
+  color:#008f18;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.tutor-enrollment-process__item {
+  display: list-item;
+  padding-bottom: 14px;
+  text-align: left;
+}
+
+.tutor-enrollment-process__item:last-child {
+  padding-bottom: 0;
+}
+
+.tutor-enrollment-process__bullet {
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #008f18;
+  margin-top: 6px;
+}
+
+.tutor-enrollment-process__text {
+  flex: 1;
+  text-align: left !important;
+}
+
+.tutor-enrollment-process__text h2 {
+  display: inline;
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: left !important;
+}
+
+.tutor-enrollment-process__text p {
+  display: inline;
+  margin: 0 0 0 4px;
+  color: green;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  text-align: left !important;
+}
+
+.tutor-enrollment-process__image-wrapper {
+  width: 100%;
+
+  background-color: #008f18;
+
+  overflow: hidden;
+}
+
+.tutor-enrollment-process__image {
+  display: block;
+
+  width: 100%;
+  max-height: 270px;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .tutor-enrollment-process__content {
+    padding: 32px 28px 24px;
+  }
+
+  .tutor-enrollment-process__image {
+    max-height: 320px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .tutor-enrollment-process__content {
+    padding: 25px 20px 20px;
+  }
+
+  .tutor-enrollment-process__title {
+    margin-bottom: 20px;
+
+    font-size: 1.5rem;
+  }
+
+  .tutor-enrollment-process__item {
+    gap: 9px;
+    padding-bottom: 12px;
+  }
+
+  .tutor-enrollment-process__bullet {
+    flex-basis: 21px;
+
+    width: 21px;
+    height: 21px;
+
+    font-size: 0.7rem;
+  }
+
+  .tutor-enrollment-process__text h2 {
+    font-size: 0.84rem;
+  }
+
+  .tutor-enrollment-process__text p {
+    font-size: 0.76rem;
+  }
+
+  .tutor-enrollment-process__image {
+    max-height: 250px;
+  }
+}
