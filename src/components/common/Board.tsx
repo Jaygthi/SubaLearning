@@ -1,4 +1,4 @@
-import "../../styles/Board.css";
+import "../../styles/board.css";
 
 export interface BoardProps {
   name: string;
