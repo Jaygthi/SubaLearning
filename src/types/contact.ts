@@ -2,7 +2,7 @@ export interface ContactFormData {
   name: string;
   mobile: string;
   email: string;
-  comments: string;
+  message: string;
 }
 
 export type ContactFormErrors = Partial<

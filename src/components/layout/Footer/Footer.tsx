@@ -13,7 +13,7 @@ const quickLinks = [
   { label: "About us", path: "/about" },
   { label: "Maths", path: "/maths" },
   { label: "Physics", path: "/physics" },
-  { label: "Tutor Enroll", path: "/tutor-enroll" },
+  // { label: "Tutor Enroll", path: "/tutor-enroll" },
   { label: "Contact Us", path: "/contact" },
 ];
 
@@ -159,14 +159,14 @@ export default function Footer() {
                   href="tel:+918800442358"
                   className="footer-contact-link"
                 >
-                  +91-8800442358
+                  +91-824 869 5890
                 </a>
 
                 <a
-                  href="mailto:customercare@careerguide.com"
+                  href="mailto:subavel2002@gmail.com"
                   className="footer-contact-link"
                 >
-                  customercare@careerguide.com
+                  subavel2002@gmail.com
                 </a>
               </div>
 

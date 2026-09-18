@@ -1,16 +1,17 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import type {
   ContactFormData,
   ContactFormErrors,
-} from "../types/contact";
-import "../styles/contacts.css";
+} from "../../types/contact";
+import "../../styles/contacts.css";
 
 const initialFormData: ContactFormData = {
   name: "",
   mobile: "",
   email: "",
-  comments: "",
+  message: "",
 };
 
 const initialTouched: Record<
@@ -20,7 +21,7 @@ const initialTouched: Record<
   name: false,
   mobile: false,
   email: false,
-  comments: false,
+  message: false,
 };
 
 function validateField(
@@ -63,13 +64,13 @@ function validateField(
 
       return undefined;
 
-    case "comments":
+    case "message":
       if (!trimmedValue) {
-        return "Please enter your comments.";
+        return "Please enter your message.";
       }
 
       if (trimmedValue.length < 10) {
-        return "Comments should contain at least 10 characters.";
+        return "message should contain at least 10 characters.";
       }
 
       return undefined;
@@ -112,6 +113,8 @@ export default function ContactForm() {
 
   const [submitted, setSubmitted] =
     useState(false);
+
+  const [submitError, setSubmitError] = useState(false);
 
   /*
    * Controlled input handler
@@ -184,7 +187,7 @@ export default function ContactForm() {
       name: true,
       mobile: true,
       email: true,
-      comments: true,
+      message: true,
     });
 
     if (
@@ -196,15 +199,18 @@ export default function ContactForm() {
     try {
       setIsSubmitting(true);
       setSubmitted(false);
+      setSubmitError(false);
 
-      /*
-       * API call will be added here.
-       *
-       * await submitContactForm(formData);
-       */
-
-      await new Promise((resolve) =>
-        setTimeout(resolve, 1000)
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          mobile: formData.mobile,
+          email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       setSubmitted(true);
@@ -212,10 +218,8 @@ export default function ContactForm() {
       setErrors({});
       setTouched(initialTouched);
     } catch (error) {
-      console.error(
-        "Contact form submission failed:",
-        error
-      );
+      console.error("Contact form submission failed:", error);
+      setSubmitError(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -234,34 +238,6 @@ export default function ContactForm() {
   };
 
   return (
-    <section
-      className="contact-section"
-      aria-labelledby="contact-heading"
-    >
-      <div className="container">
-        <div className="row align-items-center g-5">
-
-          {/* LEFT */}
-          <div className="col-lg-6">
-            <div className="contact-intro">
-
-              <h1 id="contact-heading">
-                Contact Us
-              </h1>
-
-              <div
-                className="contact-icon"
-                aria-hidden="true"
-              >
-                ☎
-              </div>
-
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <div className="col-lg-6">
-
             <div className="contact-card">
 
               <div className="contact-card-header">
@@ -283,6 +259,16 @@ export default function ContactForm() {
                 </div>
               )}
 
+              {submitError && (
+                <div
+                  className="alert alert-danger"
+                  role="alert"
+                  aria-live="polite"
+                >
+                  Something went wrong. Please try again later.
+                </div>
+              )}
+
               <form
                 onSubmit={handleSubmit}
                 noValidate
@@ -295,7 +281,7 @@ export default function ContactForm() {
                     htmlFor="name"
                     className="form-label"
                   >
-                    Your Name
+                    Parent Name
                     <span
                       className="required"
                       aria-hidden="true"
@@ -325,6 +311,7 @@ export default function ContactForm() {
                         ? "name-error"
                         : undefined
                     }
+                    placeholder="Your name"
                   />
 
                   {touched.name &&
@@ -346,7 +333,7 @@ export default function ContactForm() {
                     htmlFor="mobile"
                     className="form-label"
                   >
-                    Your Mobile Number
+                    Parent Mobile Number
                     <span
                       className="required"
                       aria-hidden="true"
@@ -378,6 +365,7 @@ export default function ContactForm() {
                         ? "mobile-error"
                         : undefined
                     }
+                    placeholder="Your mobile number"
                   />
 
                   {touched.mobile &&
@@ -399,7 +387,7 @@ export default function ContactForm() {
                     htmlFor="email"
                     className="form-label"
                   >
-                    Your Email ID
+                    Parent Email ID
                     <span
                       className="required"
                       aria-hidden="true"
@@ -429,6 +417,7 @@ export default function ContactForm() {
                         ? "email-error"
                         : undefined
                     }
+                    placeholder="Your email address"
                   />
 
                   {touched.email &&
@@ -443,14 +432,14 @@ export default function ContactForm() {
 
                 </div>
 
-                {/* COMMENTS */}
+                {/* message */}
                 <div className="mb-4">
 
                   <label
-                    htmlFor="comments"
+                    htmlFor="message"
                     className="form-label"
                   >
-                    Comments
+                    Message
                     <span
                       className="required"
                       aria-hidden="true"
@@ -460,34 +449,35 @@ export default function ContactForm() {
                   </label>
 
                   <textarea
-                    id="comments"
-                    name="comments"
+                    id="message"
+                    name="message"
                     rows={4}
-                    value={formData.comments}
+                    value={formData.message}
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className={`form-control ${getFieldClass(
-                      "comments"
+                      "message"
                     )}`}
                     aria-required="true"
                     aria-invalid={
-                      touched.comments &&
-                      Boolean(errors.comments)
+                      touched.message &&
+                      Boolean(errors.message)
                     }
                     aria-describedby={
-                      errors.comments
-                        ? "comments-error"
+                      errors.message
+                        ? "message-error"
                         : undefined
                     }
+                    placeholder="Please submit your student details (e.g., 6th grade maths or 10th grade physics) for a FREE demo class."
                   />
 
-                  {touched.comments &&
-                    errors.comments && (
+                  {touched.message &&
+                    errors.message && (
                       <div
-                        id="comments-error"
+                        id="message-error"
                         className="invalid-feedback"
                       >
-                        {errors.comments}
+                        {errors.message}
                       </div>
                     )}
 
@@ -515,10 +505,5 @@ export default function ContactForm() {
 
               </form>
             </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+ );
 }

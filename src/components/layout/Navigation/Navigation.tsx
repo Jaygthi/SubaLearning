@@ -7,7 +7,7 @@ const menu = [
   { name: "Maths", path: "/maths" },
   { name: "Physics", path: "/physics" },
   // { name: "Tutor Enroll", path: "/tutor-enroll" },
-  // { name: "Contact Us", path: "/contact" }
+  { name: "Contact Us", path: "/contact" }
 ];
 
 export default function Navigation() {

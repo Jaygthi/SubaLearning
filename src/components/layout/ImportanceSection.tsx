@@ -28,25 +28,26 @@ export default function ImportanceSection({
 
         <SectionHeader title={title} />
 
-        <div className="row align-items-stretch g-3">
+        <div className="row align-items-start g-3">
 
           {/* Information cards */}
 
           <div className="col-12 col-lg-8">
-            <div className="row g-3 h-100">
+            <div className="row g-3 h-100 text-start">
 
               {points.map((point) => (
                 <div
-                  className="col-12 col-md-6"
+                  className="col-12"
                   key={point.title}
                 >
                   <article className="importance-card h-100">
-                    <h3 className="importance-card__title">
-                      {point.title}
-                    </h3>
+                    <p className="importance-card__title">
+                      <span className="fw-bold">{point.title} - </span>
+                  
 
-                    <p className="importance-card__description mb-0">
+                    <span className="importance-card__description ">
                       {point.description}
+                    </span>
                     </p>
                   </article>
                 </div>

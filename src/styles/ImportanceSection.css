@@ -2,16 +2,16 @@
   background-color: #ffffff;
 }
 
-.importance-item {
-  color: #333;
-
-  font-size: 0.9rem;
-
-  line-height: 1.55;
+.importance-card {
+  text-align: left;
 }
 
-.importance-item strong {
-  color: #222;
+.importance-card__title {
+  text-align: left;
+}
+
+.importance-card__description {
+  text-align: left;
 }
 
 .importance-section__image {

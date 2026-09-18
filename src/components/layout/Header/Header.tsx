@@ -28,8 +28,8 @@ export default function Header() {
           <Navigation />
 
           <Link
-            to="/contact"
-            className="btn btn-success px-4 rounded-pill disabled"
+            to="/demo"
+            className="btn btn-success px-4 rounded-pill"
           >
             Demo Class
           </Link>

@@ -3,33 +3,8 @@ import Board from "../common/Board";
 import "../../styles/Eduboards.css";
 
 import homeImage from "../../assets/images/img_mom_child.jpg";
+import { educationBoards } from "../../data/data_Boards";
 
-const educationBoards = [
-  {
-    name: "CBSE",
-    description: "Classes From 6th to 12th",
-  },
-  {
-    name: "IGCSE",
-    description: "Classes From 6th to 12th",
-  },
-  {
-    name: "ICSE",
-    description: "Classes From 6th to 12th",
-  },
-  {
-    name: "TamilNadu Board",
-    description: "Classes From 6th to 12th",
-  },
-  {
-    name: "Newzealand curriculum",
-    description: "Classes From 6th to 12th",
-  },
-  {
-    name: "US Syllabus",
-    description: "Students with cut off",
-  },
-];
 
 export default function EduBoards() {
   return (
