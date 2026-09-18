@@ -4,12 +4,12 @@ import "../../styles/AcademicExcellence.css";
 const statistics = [
   {
     id: 1,
-    value: "482+",
+    value: "70+",
     label: "Students",
   },
   {
     id: 2,
-    value: "10+",
+    value: "9",
     label: "Countries",
   },
   {

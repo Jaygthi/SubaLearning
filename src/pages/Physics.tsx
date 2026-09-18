@@ -1,7 +1,7 @@
 import SubjectIntro from "../components/layout/SubjectIntro"
-import TutorSection from "../components/layout/TutorSection";
+// import TutorSection from "../components/layout/TutorSection";
 import ImportanceSection from "../components/layout/ImportanceSection";
-import BlogSection from "../components/layout/BlogSection";
+// import BlogSection from "../components/layout/BlogSection";
 
 import { physicsPageData } from "../data/data_Physics";
 
@@ -16,9 +16,9 @@ export default function Physics() {
         description={physicsPageData.intro.description}
       />
 
-      <TutorSection
+      {/* <TutorSection
         tutors={physicsPageData.tutors}
-      />
+      /> */}
 
       <ImportanceSection
         title={physicsPageData.importance.title}
@@ -27,10 +27,10 @@ export default function Physics() {
         points={physicsPageData.importance.points}
       />
 
-      <BlogSection
+      {/* <BlogSection
         title ={physicsPageData.blogs.title}
         blogs={physicsPageData.blogs.blog}
-      />
+      /> */}
     </main>
   );
 }

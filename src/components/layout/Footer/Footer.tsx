@@ -13,7 +13,7 @@ const quickLinks = [
   { label: "About us", path: "/about" },
   { label: "Maths", path: "/maths" },
   { label: "Physics", path: "/physics" },
-  { label: "Tutor Enroll", path: "/tutor-enroll" },
+  // { label: "Tutor Enroll", path: "/tutor-enroll" },
   { label: "Contact Us", path: "/contact" },
 ];
 

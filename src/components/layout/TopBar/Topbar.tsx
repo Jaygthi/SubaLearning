@@ -7,10 +7,6 @@ export default function TopBar() {
       <div className="container-fluid px-2 px-sm-3 px-md-4">
         <div className="d-flex align-items-left justify-content-left py-1">
           <div className="d-flex align-items-left gap-2 text-left">
-            {/* <i
-              className="bi bi-mortarboard-fill fs-1 flex-shrink-0"
-              aria-hidden="true"
-            /> */}
             <img src={imgGraduate} alt="Suba Online Learning" height="50" />
             <p className="mb-0 top-bar-text">
               <span className="top-bar-head">Students Get Benefits From :</span>
