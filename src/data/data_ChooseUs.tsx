@@ -34,14 +34,14 @@ export const whyChooseUsItems: WhyChooseUsItem[] = [
     id: 3,
     title: "Interactive Digital Tools",
     description:
-      "Our online platform uses whiteboards, quizzes, and recorded sessions for better understanding and revision.",
+      "Utilize engaging digital resources and tools such as Zoom, Google Meet, Microsoft Teams, and WhatsApp for better understanding and revision.",
     icon: Display,
   },
   {
     id: 4,
-    title: "Experienced & Qualified Tutors",
+    title: "Experienced & Qualified Tutor",
     description:
-      "Our tutors are highly qualified professionals with years of experience in teaching national and international syllabuses.",
+      "Highly qualified professional with years of experience in teaching national and international syllabuses.",
     icon: PersonCheck,
   },
   {
